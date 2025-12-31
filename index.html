@@ -6,7 +6,11 @@
 
   <title>Web App by Me - Lý Hoài Phong</title>
 
-  <!-- FAVICON (dùng emoji, chạy ngay không cần file ngoài) -->
+  <!-- ===== PWA CORE ===== -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2d6a4f">
+
+  <!-- FAVICON (emoji – không cần file ngoài) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
 
   <!-- ICON -->
@@ -150,7 +154,6 @@
       color: var(--text-light);
     }
 
-    /* ================= PLACEHOLDER ================= */
     .placeholder {
       border: 2px dashed #cbd5e1;
       background: transparent;
@@ -158,23 +161,11 @@
       text-align: center;
     }
 
-    /* ================= FOOTER ================= */
     footer {
       text-align: center;
       padding: 18px;
       font-size: 13px;
       color: #6b7280;
-    }
-
-    /* ================= MOBILE ================= */
-    @media (max-width: 600px) {
-      .header-text h1 {
-        font-size: 18px;
-      }
-      .logo {
-        width: 46px;
-        height: 46px;
-      }
     }
   </style>
 </head>
@@ -251,10 +242,18 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     © 2025 – Web App by Lý Hoài Phong
   </footer>
+
+  <!-- ===== SERVICE WORKER REGISTER ===== -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
 
 </body>
 </html>
