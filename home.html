@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web App by Me</title>
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --main-color: #2d6a4f;
+      --bg-color: #f4f6f8;
+      --card-bg: #ffffff;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-dark);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: linear-gradient(135deg, #1b4332, #2d6a4f);
+      color: #fff;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: #ffffff;
+      color: var(--main-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .header-text p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: var(--main-color);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .card i {
+      font-size: 28px;
+      color: var(--main-color);
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* Placeholder */
+    .placeholder {
+      border: 2px dashed #cbd5e1;
+      color: #94a3b8;
+      background: transparent;
+      text-align: center;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-layer-group"></i>
+    </div>
+    <div class="header-text">
+      <h1>Web App by Me</h1>
+      <p>Thiết kế bởi Lý Hoài Phong</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- LÀM VƯỜN -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fa-solid fa-seedling"></i>
+        <span>Làm vườn</span>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="https://lamviec246357-glitch.github.io/lamvuon2025/" target="_blank">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Quản lý chi phí Sầu Riêng</h3>
+          <p>Theo dõi chi phí – vật tư – công làm vườn</p>
+        </a>
+
+        <a class="card" href="https://lamviec246357-glitch.github.io/caosumoi/" target="_blank">
+          <i class="fa-solid fa-tree"></i>
+          <h3>Quản lý chi phí Cao Su</h3>
+          <p>Quản lý chi phí trồng và chăm sóc cao su</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- KINH DOANH -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Kinh doanh</span>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="https://lamviec246357-glitch.github.io/BHTTP/" target="_blank">
+          <i class="fa-solid fa-store"></i>
+          <h3>Dashboard Bán hàng</h3>
+          <p>Tổng hợp doanh thu – lợi nhuận – hóa đơn</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- PHÁT TRIỂN SAU -->
+    <div class="section">
+      <div class="section-title">
+        <i class="fa-solid fa-puzzle-piece"></i>
+        <span>Sắp phát triển</span>
+      </div>
+
+      <div class="grid">
+        <div class="card placeholder">
+          <i class="fa-solid fa-plus"></i>
+          <h3>Thêm Web App mới</h3>
+          <p>Khu vực dành cho các chức năng tương lai</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 - Web App by Lý Hoài Phong
+  </footer>
+
+</body>
+</html>
